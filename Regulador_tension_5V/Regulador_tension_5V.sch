@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:Regulador_tension_5V-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -59,7 +60,7 @@ U 1 1 5A806D55
 P 1450 1590
 F 0 "P1" H 1450 1740 50  0000 C CNN
 F 1 "CONN_01X02" V 1550 1590 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Angled_1x02" H 1450 1590 50  0001 C CNN
+F 2 "Connectors_Molex:Connector_Molex_PicoBlade_53047-0210" H 1450 1590 50  0001 C CNN
 F 3 "" H 1450 1590 50  0000 C CNN
 	1    1450 1590
 	-1   0    0    1   
@@ -125,7 +126,7 @@ U 1 1 5A8076A1
 P 5275 1645
 F 0 "R1" V 5355 1645 50  0000 C CNN
 F 1 "1k" V 5275 1645 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Ceramic_Horizontal_L19mm-W8mm-H8mm-p25mm" V 5205 1645 50  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" V 5205 1645 50  0001 C CNN
 F 3 "" H 5275 1645 50  0000 C CNN
 	1    5275 1645
 	1    0    0    -1  
@@ -147,7 +148,7 @@ U 1 1 5A80799B
 P 5980 1570
 F 0 "P2" H 5980 1720 50  0000 C CNN
 F 1 "CONN_01X02" V 6080 1570 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Angled_1x02" H 5980 1570 50  0001 C CNN
+F 2 "Connectors_Molex:Connector_Molex_PicoBlade_53047-0210" H 5980 1570 50  0001 C CNN
 F 3 "" H 5980 1570 50  0000 C CNN
 	1    5980 1570
 	1    0    0    -1  
