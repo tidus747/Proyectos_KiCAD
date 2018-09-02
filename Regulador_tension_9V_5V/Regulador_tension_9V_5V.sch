@@ -1,0 +1,172 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Regulador de tensión de 9V a 5V"
+Date "2018-08-31"
+Rev "1.0"
+Comp "Piensa 3D"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Linear:L7805 U1
+U 1 1 5B896ED0
+P 3440 1320
+F 0 "U1" H 3440 1562 50  0000 C CNN
+F 1 "L7805" H 3440 1471 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3465 1170 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 3440 1270 50  0001 C CNN
+	1    3440 1320
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5B897173
+P 2440 1470
+F 0 "C1" H 2555 1516 50  0000 L CNN
+F 1 "0,33uF" H 2555 1425 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2478 1320 50  0001 C CNN
+F 3 "~" H 2440 1470 50  0001 C CNN
+	1    2440 1470
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5B897233
+P 4420 1470
+F 0 "C2" H 4535 1516 50  0000 L CNN
+F 1 "0,1uF" H 4535 1425 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4458 1320 50  0001 C CNN
+F 3 "~" H 4420 1470 50  0001 C CNN
+	1    4420 1470
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5B8973F3
+P 5065 1770
+F 0 "D1" V 5103 1653 50  0000 R CNN
+F 1 "LED" V 5012 1653 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 5065 1770 50  0001 C CNN
+F 3 "~" H 5065 1770 50  0001 C CNN
+	1    5065 1770
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5B89757D
+P 5065 1470
+F 0 "R1" H 5135 1516 50  0000 L CNN
+F 1 "1K" H 5135 1425 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4995 1470 50  0001 C CNN
+F 3 "~" H 5065 1470 50  0001 C CNN
+	1    5065 1470
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5B8979B9
+P 1260 1420
+F 0 "J1" H 1232 1300 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 1232 1391 50  0000 R CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 1260 1420 50  0001 C CNN
+F 3 "~" H 1260 1420 50  0001 C CNN
+	1    1260 1420
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5B897B09
+P 6040 1420
+F 0 "J2" H 6013 1300 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 6013 1391 50  0000 R CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 6040 1420 50  0001 C CNN
+F 3 "~" H 6040 1420 50  0001 C CNN
+	1    6040 1420
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5B898260
+P 2440 1620
+F 0 "#PWR0101" H 2440 1370 50  0001 C CNN
+F 1 "GND" H 2445 1447 50  0000 C CNN
+F 2 "" H 2440 1620 50  0001 C CNN
+F 3 "" H 2440 1620 50  0001 C CNN
+	1    2440 1620
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5B8982C1
+P 3440 1620
+F 0 "#PWR0102" H 3440 1370 50  0001 C CNN
+F 1 "GND" H 3445 1447 50  0000 C CNN
+F 2 "" H 3440 1620 50  0001 C CNN
+F 3 "" H 3440 1620 50  0001 C CNN
+	1    3440 1620
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5B898329
+P 4420 1620
+F 0 "#PWR0103" H 4420 1370 50  0001 C CNN
+F 1 "GND" H 4425 1447 50  0000 C CNN
+F 2 "" H 4420 1620 50  0001 C CNN
+F 3 "" H 4420 1620 50  0001 C CNN
+	1    4420 1620
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5B89839F
+P 5065 1920
+F 0 "#PWR0104" H 5065 1670 50  0001 C CNN
+F 1 "GND" H 5070 1747 50  0000 C CNN
+F 2 "" H 5065 1920 50  0001 C CNN
+F 3 "" H 5065 1920 50  0001 C CNN
+	1    5065 1920
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5B89840E
+P 5840 1420
+F 0 "#PWR0105" H 5840 1170 50  0001 C CNN
+F 1 "GND" H 5845 1247 50  0000 C CNN
+F 2 "" H 5840 1420 50  0001 C CNN
+F 3 "" H 5840 1420 50  0001 C CNN
+	1    5840 1420
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5B898902
+P 1460 1420
+F 0 "#PWR0106" H 1460 1170 50  0001 C CNN
+F 1 "GND" H 1465 1247 50  0000 C CNN
+F 2 "" H 1460 1420 50  0001 C CNN
+F 3 "" H 1460 1420 50  0001 C CNN
+	1    1460 1420
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1460 1320 2440 1320
+Connection ~ 2440 1320
+Wire Wire Line
+	2440 1320 3140 1320
+Wire Wire Line
+	3740 1320 4420 1320
+Connection ~ 5065 1320
+Wire Wire Line
+	5065 1320 5840 1320
+Connection ~ 4420 1320
+Wire Wire Line
+	4420 1320 5065 1320
+$EndSCHEMATC
