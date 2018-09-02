@@ -1,0 +1,178 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Amplificador en configuración no inversora"
+Date "2018-09-02"
+Rev "1.0"
+Comp "Piensa 3D"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:LM741 U1
+U 1 1 5B8C02A0
+P 4495 2010
+F 0 "U1" H 4836 2056 50  0000 L CNN
+F 1 "LM741" H 4836 1965 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W10.16mm" H 4545 2060 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm741.pdf" H 4645 2160 50  0001 C CNN
+	1    4495 2010
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4495 2310
+NoConn ~ 4595 2310
+$Comp
+L power:+15V #PWR0101
+U 1 1 5B8C041F
+P 4395 1585
+F 0 "#PWR0101" H 4395 1435 50  0001 C CNN
+F 1 "+15V" H 4410 1758 50  0000 C CNN
+F 2 "" H 4395 1585 50  0001 C CNN
+F 3 "" H 4395 1585 50  0001 C CNN
+	1    4395 1585
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR0102
+U 1 1 5B8C04E3
+P 4395 2500
+F 0 "#PWR0102" H 4395 2600 50  0001 C CNN
+F 1 "-15V" H 4410 2673 50  0000 C CNN
+F 2 "" H 4395 2500 50  0001 C CNN
+F 3 "" H 4395 2500 50  0001 C CNN
+	1    4395 2500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4395 1585 4395 1645
+Wire Wire Line
+	4395 2310 4395 2430
+$Comp
+L Device:R R1
+U 1 1 5B8C0647
+P 5600 2270
+F 0 "R1" H 5670 2316 50  0000 L CNN
+F 1 "1k" H 5670 2225 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5530 2270 50  0001 C CNN
+F 3 "~" H 5600 2270 50  0001 C CNN
+	1    5600 2270
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5B8C07C5
+P 5600 2895
+F 0 "R2" H 5670 2941 50  0000 L CNN
+F 1 "1k" H 5670 2850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5530 2895 50  0001 C CNN
+F 3 "~" H 5600 2895 50  0001 C CNN
+	1    5600 2895
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5B8C09C3
+P 5600 3045
+F 0 "#PWR0103" H 5600 2795 50  0001 C CNN
+F 1 "GND" H 5605 2872 50  0000 C CNN
+F 2 "" H 5600 3045 50  0001 C CNN
+F 3 "" H 5600 3045 50  0001 C CNN
+	1    5600 3045
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J2
+U 1 1 5B8C0AF4
+P 4595 1645
+F 0 "J2" H 4568 1575 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 4568 1666 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x01_P2.54mm_Vertical" H 4595 1645 50  0001 C CNN
+F 3 "~" H 4595 1645 50  0001 C CNN
+	1    4595 1645
+	-1   0    0    1   
+$EndComp
+Connection ~ 4395 1645
+Wire Wire Line
+	4395 1645 4395 1710
+$Comp
+L Connector:Conn_01x01_Male J3
+U 1 1 5B8C0C2C
+P 4595 2430
+F 0 "J3" H 4568 2360 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 4568 2451 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x01_P2.54mm_Vertical" H 4595 2430 50  0001 C CNN
+F 3 "~" H 4595 2430 50  0001 C CNN
+	1    4595 2430
+	-1   0    0    1   
+$EndComp
+Connection ~ 4395 2430
+Wire Wire Line
+	4395 2430 4395 2500
+$Comp
+L Connector:Conn_01x02_Male J4
+U 1 1 5B8C1260
+P 6205 2110
+F 0 "J4" H 6178 1990 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 6178 2081 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 6205 2110 50  0001 C CNN
+F 3 "~" H 6205 2110 50  0001 C CNN
+	1    6205 2110
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4195 2110 3850 2110
+Wire Wire Line
+	3850 2110 3850 2745
+Wire Wire Line
+	3850 2745 5600 2745
+Wire Wire Line
+	5600 2745 5600 2420
+Connection ~ 5600 2745
+Wire Wire Line
+	4795 2010 5600 2010
+Wire Wire Line
+	5600 2120 5600 2010
+Connection ~ 5600 2010
+Wire Wire Line
+	5600 2010 6005 2010
+$Comp
+L power:GND #PWR0104
+U 1 1 5B8C1770
+P 6005 2110
+F 0 "#PWR0104" H 6005 1860 50  0001 C CNN
+F 1 "GND" H 6010 1937 50  0000 C CNN
+F 2 "" H 6005 2110 50  0001 C CNN
+F 3 "" H 6005 2110 50  0001 C CNN
+	1    6005 2110
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5B8C17E7
+P 2945 2010
+F 0 "J1" H 2917 1890 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 2917 1981 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 2945 2010 50  0001 C CNN
+F 3 "~" H 2945 2010 50  0001 C CNN
+	1    2945 2010
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4195 1910 3145 1910
+$Comp
+L power:GND #PWR0105
+U 1 1 5B8C1B38
+P 3145 2010
+F 0 "#PWR0105" H 3145 1760 50  0001 C CNN
+F 1 "GND" H 3150 1837 50  0000 C CNN
+F 2 "" H 3145 2010 50  0001 C CNN
+F 3 "" H 3145 2010 50  0001 C CNN
+	1    3145 2010
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
