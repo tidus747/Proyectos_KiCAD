@@ -1,0 +1,191 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Convertidor de corriente a tensión"
+Date "2018-09-03"
+Rev "1.0"
+Comp "Piensa 3D"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:LM741 U1
+U 1 1 5B8D53EA
+P 3380 1805
+F 0 "U1" H 3721 1851 50  0000 L CNN
+F 1 "LM741" H 3721 1760 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W10.16mm" H 3430 1855 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm741.pdf" H 3530 1955 50  0001 C CNN
+	1    3380 1805
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5B8D5589
+P 3265 2550
+F 0 "R1" V 3058 2550 50  0000 C CNN
+F 1 "1k" V 3149 2550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P20.32mm_Horizontal" V 3195 2550 50  0001 C CNN
+F 3 "~" H 3265 2550 50  0001 C CNN
+	1    3265 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3080 1905 2915 1905
+Wire Wire Line
+	2915 1905 2915 2550
+Wire Wire Line
+	2915 2550 3115 2550
+Wire Wire Line
+	3680 1805 4625 1805
+Wire Wire Line
+	4625 1805 4625 2550
+Wire Wire Line
+	4625 2550 3415 2550
+NoConn ~ 3480 2105
+NoConn ~ 3380 2105
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5B8D5BD6
+P 3645 1250
+F 0 "J2" H 3618 1130 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 3618 1221 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3645 1250 50  0001 C CNN
+F 3 "~" H 3645 1250 50  0001 C CNN
+	1    3645 1250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3280 1505 3280 1150
+Wire Wire Line
+	3280 1150 3445 1150
+$Comp
+L power:GND #PWR0101
+U 1 1 5B8D5E08
+P 3445 1250
+F 0 "#PWR0101" H 3445 1000 50  0001 C CNN
+F 1 "GND" H 3450 1077 50  0000 C CNN
+F 2 "" H 3445 1250 50  0001 C CNN
+F 3 "" H 3445 1250 50  0001 C CNN
+	1    3445 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR0102
+U 1 1 5B8D5E6F
+P 3280 1150
+F 0 "#PWR0102" H 3280 1000 50  0001 C CNN
+F 1 "+15V" H 3295 1323 50  0000 C CNN
+F 2 "" H 3280 1150 50  0001 C CNN
+F 3 "" H 3280 1150 50  0001 C CNN
+	1    3280 1150
+	1    0    0    -1  
+$EndComp
+Connection ~ 3280 1150
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5B8D5F92
+P 3860 2315
+F 0 "J3" H 3833 2195 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 3833 2286 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3860 2315 50  0001 C CNN
+F 3 "~" H 3860 2315 50  0001 C CNN
+	1    3860 2315
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3660 2215 3280 2215
+Wire Wire Line
+	3280 2215 3280 2105
+$Comp
+L power:GND #PWR0103
+U 1 1 5B8D6127
+P 3660 2315
+F 0 "#PWR0103" H 3660 2065 50  0001 C CNN
+F 1 "GND" H 3665 2142 50  0000 C CNN
+F 2 "" H 3660 2315 50  0001 C CNN
+F 3 "" H 3660 2315 50  0001 C CNN
+	1    3660 2315
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR0104
+U 1 1 5B8D61B5
+P 3280 2215
+F 0 "#PWR0104" H 3280 2315 50  0001 C CNN
+F 1 "-15V" V 3295 2343 50  0000 L CNN
+F 2 "" H 3280 2215 50  0001 C CNN
+F 3 "" H 3280 2215 50  0001 C CNN
+	1    3280 2215
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3280 2215
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5B8D634B
+P 1885 1805
+F 0 "J1" H 1857 1685 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 1857 1776 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1885 1805 50  0001 C CNN
+F 3 "~" H 1885 1805 50  0001 C CNN
+	1    1885 1805
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5B8D662E
+P 2085 1805
+F 0 "#PWR0105" H 2085 1555 50  0001 C CNN
+F 1 "GND" H 2090 1632 50  0000 C CNN
+F 2 "" H 2085 1805 50  0001 C CNN
+F 3 "" H 2085 1805 50  0001 C CNN
+	1    2085 1805
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2085 1705 2915 1705
+Wire Wire Line
+	2915 1705 2915 1905
+Connection ~ 2915 1905
+$Comp
+L power:GND #PWR0106
+U 1 1 5B8D6757
+P 3080 1705
+F 0 "#PWR0106" H 3080 1455 50  0001 C CNN
+F 1 "GND" H 3085 1532 50  0000 C CNN
+F 2 "" H 3080 1705 50  0001 C CNN
+F 3 "" H 3080 1705 50  0001 C CNN
+	1    3080 1705
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J4
+U 1 1 5B8D67B8
+P 5135 1905
+F 0 "J4" H 5108 1785 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 5108 1876 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5135 1905 50  0001 C CNN
+F 3 "~" H 5135 1905 50  0001 C CNN
+	1    5135 1905
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5B8D68E3
+P 4935 1905
+F 0 "#PWR0107" H 4935 1655 50  0001 C CNN
+F 1 "GND" H 4940 1732 50  0000 C CNN
+F 2 "" H 4935 1905 50  0001 C CNN
+F 3 "" H 4935 1905 50  0001 C CNN
+	1    4935 1905
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4935 1805 4625 1805
+Connection ~ 4625 1805
+$EndSCHEMATC
