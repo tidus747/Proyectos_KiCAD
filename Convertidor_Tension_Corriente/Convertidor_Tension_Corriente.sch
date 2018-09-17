@@ -1,0 +1,187 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Convertidor de tension a corriente"
+Date "2018-09-17"
+Rev "1.0"
+Comp "Piensa 3D"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:LM741 U1
+U 1 1 5BA0170B
+P 3085 1725
+F 0 "U1" H 3426 1771 50  0000 L CNN
+F 1 "LM741" H 3426 1680 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W10.16mm" H 3135 1775 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm741.pdf" H 3235 1875 50  0001 C CNN
+	1    3085 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5BA01849
+P 1550 1735
+F 0 "J1" H 1522 1615 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 1522 1706 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1550 1735 50  0001 C CNN
+F 3 "~" H 1550 1735 50  0001 C CNN
+	1    1550 1735
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BA01A29
+P 3930 1920
+F 0 "R1" H 3860 1874 50  0000 R CNN
+F 1 "RL" H 3860 1965 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P25.40mm_Horizontal" V 3860 1920 50  0001 C CNN
+F 3 "~" H 3930 1920 50  0001 C CNN
+	1    3930 1920
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BA01C3A
+P 3930 2410
+F 0 "R2" H 4000 2456 50  0000 L CNN
+F 1 "1k" H 4000 2365 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P25.40mm_Horizontal" V 3860 2410 50  0001 C CNN
+F 3 "~" H 3930 2410 50  0001 C CNN
+	1    3930 2410
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3930 1725 3930 1770
+Wire Wire Line
+	3385 1725 3930 1725
+Wire Wire Line
+	2785 1825 2785 2260
+Wire Wire Line
+	2785 2260 3930 2260
+Wire Wire Line
+	1750 1635 2785 1635
+Wire Wire Line
+	2785 1635 2785 1625
+$Comp
+L power:GND #PWR0101
+U 1 1 5BA01ED1
+P 1750 1735
+F 0 "#PWR0101" H 1750 1485 50  0001 C CNN
+F 1 "GND" H 1755 1562 50  0000 C CNN
+F 2 "" H 1750 1735 50  0001 C CNN
+F 3 "" H 1750 1735 50  0001 C CNN
+	1    1750 1735
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5BA01F0B
+P 3930 2560
+F 0 "#PWR0102" H 3930 2310 50  0001 C CNN
+F 1 "GND" H 3935 2387 50  0000 C CNN
+F 2 "" H 3930 2560 50  0001 C CNN
+F 3 "" H 3930 2560 50  0001 C CNN
+	1    3930 2560
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3185 2025
+NoConn ~ 3085 2025
+$Comp
+L power:+15V #PWR0103
+U 1 1 5BA0216E
+P 2985 1425
+F 0 "#PWR0103" H 2985 1275 50  0001 C CNN
+F 1 "+15V" H 3000 1598 50  0000 C CNN
+F 2 "" H 2985 1425 50  0001 C CNN
+F 3 "" H 2985 1425 50  0001 C CNN
+	1    2985 1425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR0104
+U 1 1 5BA021F7
+P 2985 2025
+F 0 "#PWR0104" H 2985 2125 50  0001 C CNN
+F 1 "-15V" H 3000 2198 50  0000 C CNN
+F 2 "" H 2985 2025 50  0001 C CNN
+F 3 "" H 2985 2025 50  0001 C CNN
+	1    2985 2025
+	-1   0    0    1   
+$EndComp
+Connection ~ 3930 2260
+Wire Wire Line
+	3930 2070 3930 2260
+$Comp
+L power:+15V #PWR0105
+U 1 1 5BA024EB
+P 3805 990
+F 0 "#PWR0105" H 3805 840 50  0001 C CNN
+F 1 "+15V" H 3820 1163 50  0000 C CNN
+F 2 "" H 3805 990 50  0001 C CNN
+F 3 "" H 3805 990 50  0001 C CNN
+	1    3805 990 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR0106
+U 1 1 5BA02520
+P 4115 990
+F 0 "#PWR0106" H 4115 1090 50  0001 C CNN
+F 1 "-15V" H 4130 1163 50  0000 C CNN
+F 2 "" H 4115 990 50  0001 C CNN
+F 3 "" H 4115 990 50  0001 C CNN
+	1    4115 990 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5BA0259D
+P 4315 1090
+F 0 "J3" H 4288 970 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 4288 1061 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 4315 1090 50  0001 C CNN
+F 3 "~" H 4315 1090 50  0001 C CNN
+	1    4315 1090
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5BA026EB
+P 3605 1090
+F 0 "J2" H 3577 970 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 3577 1061 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 3605 1090 50  0001 C CNN
+F 3 "~" H 3605 1090 50  0001 C CNN
+	1    3605 1090
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5BA028C9
+P 3805 1090
+F 0 "#PWR0107" H 3805 840 50  0001 C CNN
+F 1 "GND" H 3810 917 50  0000 C CNN
+F 2 "" H 3805 1090 50  0001 C CNN
+F 3 "" H 3805 1090 50  0001 C CNN
+	1    3805 1090
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5BA028F3
+P 4115 1090
+F 0 "#PWR0108" H 4115 840 50  0001 C CNN
+F 1 "GND" H 4120 917 50  0000 C CNN
+F 2 "" H 4115 1090 50  0001 C CNN
+F 3 "" H 4115 1090 50  0001 C CNN
+	1    4115 1090
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
