@@ -1,0 +1,248 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Amplificador sumador"
+Date "2018-09-27"
+Rev "1.0"
+Comp "Piensa 3D"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:LM741 U1
+U 1 1 5BACBC7F
+P 3540 2520
+F 0 "U1" H 3881 2474 50  0000 L CNN
+F 1 "LM741" H 3881 2565 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W10.16mm" H 3590 2570 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm741.pdf" H 3690 2670 50  0001 C CNN
+	1    3540 2520
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5BACBE88
+P 3505 1650
+F 0 "R4" V 3712 1650 50  0000 C CNN
+F 1 "R" V 3621 1650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P30.48mm_Horizontal" V 3435 1650 50  0001 C CNN
+F 3 "~" H 3505 1650 50  0001 C CNN
+	1    3505 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5BACC089
+P 2715 2420
+F 0 "R3" V 2922 2420 50  0000 C CNN
+F 1 "R" V 2831 2420 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P30.48mm_Horizontal" V 2645 2420 50  0001 C CNN
+F 3 "~" H 2715 2420 50  0001 C CNN
+	1    2715 2420
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BACC1E5
+P 2715 2105
+F 0 "R2" V 2922 2105 50  0000 C CNN
+F 1 "R" V 2831 2105 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P30.48mm_Horizontal" V 2645 2105 50  0001 C CNN
+F 3 "~" H 2715 2105 50  0001 C CNN
+	1    2715 2105
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BACC249
+P 2710 2740
+F 0 "R1" V 2917 2740 50  0000 C CNN
+F 1 "R" V 2826 2740 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P30.48mm_Horizontal" V 2640 2740 50  0001 C CNN
+F 3 "~" H 2710 2740 50  0001 C CNN
+	1    2710 2740
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2865 2420 3090 2420
+Wire Wire Line
+	3240 2420 3240 2105
+Wire Wire Line
+	3240 2105 2865 2105
+Connection ~ 3240 2420
+Wire Wire Line
+	2860 2740 3090 2740
+Wire Wire Line
+	3090 2740 3090 2420
+Connection ~ 3090 2420
+Wire Wire Line
+	3090 2420 3240 2420
+$Comp
+L power:GND #PWR0101
+U 1 1 5BACC411
+P 3240 2620
+F 0 "#PWR0101" H 3240 2370 50  0001 C CNN
+F 1 "GND" H 3245 2447 50  0000 C CNN
+F 2 "" H 3240 2620 50  0001 C CNN
+F 3 "" H 3240 2620 50  0001 C CNN
+	1    3240 2620
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR0102
+U 1 1 5BACC49A
+P 3440 2970
+F 0 "#PWR0102" H 3440 2820 50  0001 C CNN
+F 1 "+15V" H 3455 3143 50  0000 C CNN
+F 2 "" H 3440 2970 50  0001 C CNN
+F 3 "" H 3440 2970 50  0001 C CNN
+	1    3440 2970
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:-15V #PWR0103
+U 1 1 5BACC528
+P 3440 2025
+F 0 "#PWR0103" H 3440 2125 50  0001 C CNN
+F 1 "-15V" H 3455 2198 50  0000 C CNN
+F 2 "" H 3440 2025 50  0001 C CNN
+F 3 "" H 3440 2025 50  0001 C CNN
+	1    3440 2025
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3540 2220
+NoConn ~ 3640 2220
+Wire Wire Line
+	3840 2520 4285 2520
+Wire Wire Line
+	4285 2520 4285 1650
+Wire Wire Line
+	4285 1650 3655 1650
+Wire Wire Line
+	3355 1650 3240 1650
+Wire Wire Line
+	3240 1650 3240 2105
+Connection ~ 3240 2105
+Wire Wire Line
+	3440 2025 3440 2065
+Wire Wire Line
+	3440 2820 3440 2890
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5BACCB6B
+P 3910 2165
+F 0 "J3" H 3883 2045 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 3883 2136 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x01_P2.54mm_Vertical_SMD" H 3910 2165 50  0001 C CNN
+F 3 "~" H 3910 2165 50  0001 C CNN
+	1    3910 2165
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3710 2065 3440 2065
+Connection ~ 3440 2065
+Wire Wire Line
+	3440 2065 3440 2220
+$Comp
+L power:GND #PWR0104
+U 1 1 5BACCD1E
+P 3710 2165
+F 0 "#PWR0104" H 3710 1915 50  0001 C CNN
+F 1 "GND" H 3715 1992 50  0000 C CNN
+F 2 "" H 3710 2165 50  0001 C CNN
+F 3 "" H 3710 2165 50  0001 C CNN
+	1    3710 2165
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5BACCD83
+P 3840 2990
+F 0 "J2" H 3813 2870 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 3813 2961 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x01_P2.54mm_Vertical_SMD" H 3840 2990 50  0001 C CNN
+F 3 "~" H 3840 2990 50  0001 C CNN
+	1    3840 2990
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5BACCE27
+P 3640 2990
+F 0 "#PWR0105" H 3640 2740 50  0001 C CNN
+F 1 "GND" H 3645 2817 50  0000 C CNN
+F 2 "" H 3640 2990 50  0001 C CNN
+F 3 "" H 3640 2990 50  0001 C CNN
+	1    3640 2990
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3640 2890 3440 2890
+Connection ~ 3440 2890
+Wire Wire Line
+	3440 2890 3440 2970
+$Comp
+L Connector:Conn_01x02_Male J4
+U 1 1 5BACCFA5
+P 4485 2620
+F 0 "J4" H 4458 2500 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 4458 2591 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x01_P2.54mm_Vertical_SMD" H 4485 2620 50  0001 C CNN
+F 3 "~" H 4485 2620 50  0001 C CNN
+	1    4485 2620
+	-1   0    0    1   
+$EndComp
+Connection ~ 4285 2520
+$Comp
+L power:GND #PWR0106
+U 1 1 5BACD0C7
+P 4285 2620
+F 0 "#PWR0106" H 4285 2370 50  0001 C CNN
+F 1 "GND" H 4290 2447 50  0000 C CNN
+F 2 "" H 4285 2620 50  0001 C CNN
+F 3 "" H 4285 2620 50  0001 C CNN
+	1    4285 2620
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 5BACD1A8
+P 1815 2425
+F 0 "J1" H 1787 2305 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 1787 2396 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 1815 2425 50  0001 C CNN
+F 3 "~" H 1815 2425 50  0001 C CNN
+	1    1815 2425
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5BACD374
+P 2015 2525
+F 0 "#PWR0107" H 2015 2275 50  0001 C CNN
+F 1 "GND" H 2020 2352 50  0000 C CNN
+F 2 "" H 2015 2525 50  0001 C CNN
+F 3 "" H 2015 2525 50  0001 C CNN
+	1    2015 2525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2015 2225 2565 2225
+Wire Wire Line
+	2565 2225 2565 2105
+Wire Wire Line
+	2015 2325 2565 2325
+Wire Wire Line
+	2565 2325 2565 2420
+Wire Wire Line
+	2015 2425 2405 2425
+Wire Wire Line
+	2405 2425 2405 2740
+Wire Wire Line
+	2405 2740 2560 2740
+$EndSCHEMATC
