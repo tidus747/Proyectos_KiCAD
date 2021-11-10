@@ -9,4 +9,4 @@ En este repositorio se almacenarán todos los proyectos para KiCAD desarrollados
 
 Las herramientas utilizadas durante el desarrollo de los tutoriales han sido las siguientes:
 
-- [KiCAD](http://kicad-pcb.org/) -  Suite de diseño electrónico.
+- [KiCAD](http://kicad.org/) -  Suite de diseño electrónico.
